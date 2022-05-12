@@ -1,0 +1,64 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Multiplayer Jumping Game</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Project name</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Multiplayer Jumping Game</h1>
+							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
+							<p>
+								Probably my most extensive hobby  project to date, most of the work took place during the summer of 2021. The idea for the game was heavily based on previous games such as “Getting over it” and “Jump King” but, with multiplayer and taking place in a 3D setting. The core concept for the gameplay was that it would be highly challenging to the player, leading to, at times, high levels of frustration but also a rewarding feeling for those who managed to overcome the level and progress. Fundamentally, the gameplay is very basic. The player can move around as a character and needs to get from point A to point B by jumping over chasms and cliffs without falling. Each jump is calculated based on the duration of the player holding down their jump button (similar to Jump King) and mastering this is central to progressing as the game gets more and more challenging, demanding more and more precision from the player. As a player progresses through the game, the idea was that they could also find various pickups which they could use to interact with other players in the world, allowing them to either help or mess with other people trying to progress.
+							</p>
+						<p>
+								When creating the game I started off by looking for a multiplayer framework that I could use and the one I opted for was a framework called mirror. The mirror Unity framework already came with full support for rigid bodies which enabled me to use networked physics for each player which was a central feature of the game. I used this feature extensively, for example making it so that each player character could be ragdolled by colliding with things while in the air, which would lead to their character flailing about as they fell down.
+							</p></div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
