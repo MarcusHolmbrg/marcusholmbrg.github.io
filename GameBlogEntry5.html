@@ -1,0 +1,89 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Wanderful Project Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Back to Main</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="GameDesignProjectBlog.html" class="active">Back to the Project Blog</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Week 5 - Back to the Game</h1>
+							<span class="image fit"><img src="images/wanderfulWeek5.png" alt="" /></span>
+							<p>
+								Not much work was done on the game during Easter week, as everyone in the group was busy with other more pressing assignments.
+
+							</p>
+
+							<p>
+								Coming back after Easter however, things quickly got back on track. Early on in the week the group held a meeting to discuss how we were going to proceed with the game as
+								well as dividing up tasks for who in the group should work on what. I personally took it upon myself to work on a spell system for the game. This meant multiple different 
+								spells with different spell types (for example bouncing spells, area of effect spells, cluster spells, beam spells, utility spells) as well as a system that allowed the player to 
+								equip/unequip these spells in three separate spell slots tied to three different user inputs. 
+
+
+							</p>
+							<p>
+								After we split up the tasks into different categories, we looked into  dividing up tasks for who in the group should work on what. 
+								We made a week-by week plan where we divided the tasks into different categories. These categories were “Player”, “Enemies”, “Maps”, “UI” and “Audio” 
+								where we had placed the higher prioritized features to be completed first. Out of these features, I personally took it upon myself to work on a spell system for 
+								the game during week 5. This meant multiple different spells with different spell types (for example bouncing spells, area of effect spells, cluster spells, beam 
+								spells, utility spells) as well as a system that allowed the player to equip/unequip these spells in three separate spell slots tied to three different user inputs.
+
+
+							</p>
+							<p>
+								As I started on the spell system I wanted the system to be modular and easily expanded upon later in development. I achieved this by creating a dictionary of sorts where the game manager 
+								(a component commonly used in Unity) contained all the different spells in  the game as well as methods which could be used by the player or enemies to easily get the data for any specific spell
+								. It was also easy to create a system for dropping in-hand spells as the game manager could simply instantiate a spell on the floor of the corresponding type. I also took it upon myself during the
+								first week to create an enemy aggro system so that enemies would agro if the player fired a spell within a close proximity.
+
+							</p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

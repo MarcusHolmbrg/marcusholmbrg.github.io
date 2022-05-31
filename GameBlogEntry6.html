@@ -1,0 +1,79 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Wanderful Project Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Back to Main</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="GameDesignProjectBlog.html" class="active">Back to the Project Blog</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Week 6 - Back to the Game</h1>
+							<span class="image fit"><img src="images/wanderfulWeek6.png" alt="" /></span>
+							<p>
+								At the beginning of the sixth week, the group held a meeting to discuss/show off our progress as well as merge our files into a single file which we could all switch to working on for the next week. 
+								Upon doing this we ran into a bit of trouble with merge conflicts so we agreed to do this every week from then on as we didnt want too many conflicts to deal with close to the final deadline. During the 
+								aforementioned meeting we also discussed what each person should work on during the coming week. For this week, I chose to work on multiple spell types and I started looking into how we could go about implementing 
+								things like AoE spells, Beam spells and various spells used for utility. AoE spells I found to be quite straight forward, as they could be quite easily done by instead of just destroying a spell projectile on collision 
+								you would instead create an explosion effect and deal damage to anything within a certain radius of this explosion. The explosion visual effects I got from Baptiste in the group, who had found various free, open license 
+								artwork that we could use for the group. I used a set of images to create animated impact/explosion effects for two spell explosions as well as impacts for the regular, non AoE spells. As an added touch, I added a light effect 
+								so that the explosions/impacts would give off light that gradually decayed with the animated effect.
+
+
+							</p>
+
+							<p>
+								Additionally during this week I got to work on utility spells. For the demo I added three spells in this category (these being; heal, increased movement speed and a blink/short range teleport ability). 
+								Out of these, the Blink spell took a bit of time to get somewhat functional but slightly inconsistent which was caused by some issues with the colliders used in our levels. I also started looking into the beam spell 
+								but was unable to finish it during the sixth week due to a lack of time.
+
+
+							</p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

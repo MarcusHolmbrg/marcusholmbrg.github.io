@@ -1,0 +1,92 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Wanderful Project Blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Back to Main</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="GameDesignProjectBlog.html" class="active">Back to the Project Blog</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Week 7 - Pushing For The Second Demo</h1>
+							<span class="image fit"><img src="images/wanderfulWeek7.png" alt="" /></span>
+							<p>
+								Throughout week 7, work was very much focused on creating a more fleshed out experience for the second demo session, which was due to be held on the monday after (on the 16th of May). 
+								In the beginning of the week, I kept working on the beam spell type which was a bit challenging to get right. I spent a lot of time looking into whether or not it was possible to “cut off”
+								animated textures in order to get the beam to stop where it collided with a wall for example but in the end I instead opted to make use of a Unity shader while following a youtube tutorial.
+								After getting the beam spell type we felt that the magic system was sufficiently fleshed out for the demo we were making.
+
+
+
+							</p>
+							<p>
+								While we originally wanted to have a meeting at the beginning of the week, members of the group were busy with other things so the meeting was postponed towards the end of the week. 
+								During the meeting we were set to merge all of our work into a single file in Unity however when doing this, we ran into quite a number of merge issues which took some time to resolve. 
+								After we got the merge issues resolved, we looked at the demo and agreed that it had some issues (for example the level loading/reloading was quite unreliable and buggy).
+
+
+							</p>
+
+							<p>
+								Once again I went into a bit of a personal crunch on the game during the weekend as I felt that it would be great if we could have a smooth & less buggy game to get feedback on during the
+								second demo session. For a start, I went back and looked at how me and Alex had handled scene management in Unity in the game that we made for our <a href="CandidateDegreeGame.html">candidate degree project game</a>. In that game,
+								we had made it so that a number of components would persist through scene loads and I felt that we could use a similar structure for our demo. First off, I made it so that our game manager, player, 
+								audio source and UI elements would persist across each level (whereas before these entities could be recreated upon each level reload). By doing this, the player object could be easily carried over 
+								between each level (so that the player could keep the same spells/score for example) while progressing through the game. In the player script, I added that instead of instantly reloading the level
+								upon death, the player would enter a “dead state” where they spawned a dead body on the ground and couldn't move. In the game manager I coded methods to handle reloads of each level
+								(resetting all enemies, player health/mana etc) as well as a method to restart the entire game from the start. Finally, I implemented a rudimentary score system which I felt would work well on a demo
+								setting (having people compete for a highest score might be fun for example).
+
+
+
+
+							</p>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
