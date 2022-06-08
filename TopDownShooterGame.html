@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Multiplayer Jumping Game</title>
+		<title>Top down shooter</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -15,14 +15,12 @@
 	<body class="is-preload">
 
 		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">Project name</a>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-					</ul>
-				</nav>
-			</header>
+		<header id="header">
+			<a href="index.html" class="title">Home</a>
+			<nav>
+
+			</nav>
+		</header>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -30,13 +28,29 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">Multiplayer Jumping Game</h1>
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
+							<h1 class="major">Top Down Shooter Game</h1>
+							<span class="image fit"><img src="images/TopDownShootrGame.png" alt="" /></span>
 							<p>
-								Probably my most extensive hobby  project to date, most of the work took place during the summer of 2021. The idea for the game was heavily based on previous games such as “Getting over it” and “Jump King” but, with multiplayer and taking place in a 3D setting. The core concept for the gameplay was that it would be highly challenging to the player, leading to, at times, high levels of frustration but also a rewarding feeling for those who managed to overcome the level and progress. Fundamentally, the gameplay is very basic. The player can move around as a character and needs to get from point A to point B by jumping over chasms and cliffs without falling. Each jump is calculated based on the duration of the player holding down their jump button (similar to Jump King) and mastering this is central to progressing as the game gets more and more challenging, demanding more and more precision from the player. As a player progresses through the game, the idea was that they could also find various pickups which they could use to interact with other players in the world, allowing them to either help or mess with other people trying to progress.
-							</p>
-						<p>
-								When creating the game I started off by looking for a multiplayer framework that I could use and the one I opted for was a framework called mirror. The mirror Unity framework already came with full support for rigid bodies which enabled me to use networked physics for each player which was a central feature of the game. I used this feature extensively, for example making it so that each player character could be ragdolled by colliding with things while in the air, which would lead to their character flailing about as they fell down.
+								My first major Unity project which I started working on back in 2019. I had long been thinking about making a top down shooter type game in a 3D setting. The idea was for the game to eventually be
+								turned into a networked multiplayer experience, where players could either work together or against each other in various levels but the project never got that far.
+								<br />
+								<br />
+								As this was my first independent project, there was plenty of trial and error involved, as well as following various youtube tutorials. In particular, I looked at tutorials for the <a href="https://www.youtube.com/watch?v=_S91dfkZ4oI">top down type camera, the basic movement</a>
+								and <a href="https://www.youtube.com/watch?v=LNLVOjbrQj4">shooting projectiles</a>. It spent quite a bit of time fine tuning the movement and controls until I found it felt responsive but not too quick in allowing the player to switch movement
+								direction. I wanted to emulate the movement from the game <a href="https://store.steampowered.com/agecheck/app/219150/">“Hotline miami”</a> where the player character can move and change directions quickly, but not instantly which added another layer of skill in that the
+								player needed to predict how their character would move and move accordingly. In order to get the movement just right I went back and forth between the various options used in Unity (namely the character
+								controller, a rigidbody with forces applied and direct transform movement).
+
+								<br />
+								<br />
+
+								During this project I also first wrote the script for the camera controls (using the previously referenced video as a starting point)
+								variations of which I have used in several different projects since. While working on this project I also got to try 3D character animation and rigging for the first time. I took some premade 3D characters from
+								the <a href="https://www.mixamo.com/">Mixamo Website</a> and set up the animation rig/movement in the Unity game engine. After setting up the animations, I also got them working correctly  through a  script I wrote which made it so that the characters
+								would move appropriately to their movement direction/speed using a Unity blend tree.
+
+
+
 							</p></div>
 					</section>
 
