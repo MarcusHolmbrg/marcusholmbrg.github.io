@@ -2478,7 +2478,7 @@ input[type="radio"] {
 	input[type="radio"]:checked + label:before {
 		background: #ffffff;
 		border-color: #ffffff;
-		color: #b74e91;
+		color: #2c3dbf;
 		content: '\f00c';
 	}
 
@@ -3279,7 +3279,7 @@ table {
 }
 
 .wrapper.style3 {
-	background-color: #b74e91;
+	background-color: #624194;
 }
 
 .wrapper.style3-alt {
