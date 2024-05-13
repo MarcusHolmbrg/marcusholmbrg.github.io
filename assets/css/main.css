@@ -3891,7 +3891,7 @@ body.is-preload #sidebar nav ul li {
 
 #intro {
 	background-attachment: fixed;
-	background: linear-gradient(0deg, #1e2276, #3e409419), url(images/Vortex.png);
+	background: linear-gradient(0deg, #1e2276, #3e409419), url(images/vortex.png);
 	background-position: top right;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
