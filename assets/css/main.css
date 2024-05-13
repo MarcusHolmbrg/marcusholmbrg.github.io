@@ -99,7 +99,7 @@ html {
 }
 
 body {
-	background: #312450;
+	background: #26273c;
 }
 
 	body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3263,15 +3263,16 @@ table {
 }
 
 .wrapper.style1 {
-	background-color: #5e42a6;
+	
+	background-image: url("images/Glxy.png");
 }
 
 .wrapper.style1-alt {
-	background-color: #493382;
+	background-color: #26273c;
 }
 
 .wrapper.style2 {
-	background-color: #5052b5;
+	background-color: #1e2276;
 }
 
 .wrapper.style2-alt {
@@ -3279,11 +3280,11 @@ table {
 }
 
 .wrapper.style3 {
-	background-color: #624194;
+	background-color: #26273c;
 }
 
 .wrapper.style3-alt {
-	background-color: #953d75;
+	background-color: #ffffff;
 }
 
 .wrapper.fullscreen {
@@ -3300,6 +3301,8 @@ table {
 	-ms-justify-content: center;
 	justify-content: center;
 	min-height: 100vh;
+
+	
 }
 
 body.is-ie .wrapper.fullscreen {
@@ -3391,7 +3394,7 @@ body.is-preload .wrapper.fade > .inner {
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
-	background-color: #5e42a6;
+	background-color: #494b7b;
 	cursor: default;
 	padding: 1.75em 2em;
 }
@@ -3540,7 +3543,7 @@ body.is-preload .wrapper.fade > .inner {
 
 #sidebar {
 	padding: 2.5em 2.5em 0.5em 2.5em;
-	background: #312450;
+	background: #18192a;
 	cursor: default;
 	height: 100vh;
 	left: 0;
@@ -3888,7 +3891,7 @@ body.is-preload #sidebar nav ul li {
 
 #intro {
 	background-attachment: fixed;
-	background-image: url("images/intro.svg");
+	background: linear-gradient(0deg, #1e2276, #3e409419), url(images/Vortex.png);
 	background-position: top right;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
