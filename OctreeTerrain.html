@@ -32,21 +32,33 @@
 							<span class="image fit"><img src="images/TerrainHeader.png" alt="" /></span>
 
 							<span class="image right">
-								<iframe width="420" height="315"
-										src="https://www.youtube.com/embed/oFGdpnq5JV8">
-								</iframe>
+								<video width="480" height="315" controls loop="" muted="" audoplay="">
+									<source src="vids/octreeterrain.mp4">
+								</video>
 							</span>
 
 
-							My MSc project centered around the use of octrees for volumetric terrains. More specifically, it investigated the potential of a novel approach for using the geometry of an octree structure alongside human perception metrics
-							to optimize detail distribution in Level of detail (LOD) systems. In order to conduct an evaluation of my suggested method, I implemented a procedural terrain generator in the Unity game engine. The terrain generator featured a wide array
-							of different parameters, enabling the user to configure what the generated terrain will look like. Over the course of this project, I got to learn a lot about working with Unity Jobs, which has been used alongside the Unity Burst
-							compiler to improve performance.
+							My MSc project centered around the use of level of detail (LOD) systems in computer graphics. In it, I proposed a novel method for leveraging human perception to optimize detail allocation based on
+							human perception. In the method I use the geometrical properties of an octree when projected on the screen to dynamically determine LOD transition distances at a minimum cost to performance. Octree data
+							structures are often well suited to represent volumetrical data, as it can compress the memory footprint of said data greatly. In order to conduct an evaluation of my suggested method, I implemented a procedural
+							terrain generator in the Unity game engine. The terrain generator featured a wide array of different parameters, enabling the user to configure what the generated terrain will look like.
+							The choice of making a terrain generator as a tool to evaluate the LOD was made on the strong correlation of LOD systems alongside virtual terrains.<br /><br />
+
+							The terrain is rendered using a mesh which enables it to inherently leverage the post processing and lighting system in Unity. The mesh is also culled and optimized to only contain faces adjecent to air and upwards
+							in order to lower its memory use.
 
 
-							The choice of making a terrain generator as a tool to evaluate the LOD was made on the strong correlation of LOD systems alongside virtual terrains. 
+							Over the course of this project, I got to learn a lot about working with Unity Jobs, which has been used alongside the Unity Burst compiler to improve performance. In addition to this, I also learned a lot about the
+							area of research as a whole, mainly relating to procedural terrain generation, procedural meshing and creating performant algorithms.
+
+
 							<br />
+							<img width="440" height="320" src="images/mscterrain.png" alt="" />
+							<img width="440" height="320" src="images/terrain1.png" alt="" />
+							<img width="440" height="320" src="images/terrain2.png" alt="" />
 
+							<br />
+							I am looking to clean up my repository for this project and open source it in the near future. When I do, it will be available on my <a href="https://github.com/MarcusHolmbrg/">github</a>.
 
 
 
