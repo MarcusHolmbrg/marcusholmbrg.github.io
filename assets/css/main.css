@@ -3545,7 +3545,7 @@ body.is-preload .wrapper.fade > .inner {
 @media screen and (max-width: 736px) {
 
 	#sidebar + #wrapper {
-		padding-top: 0;
+		padding-top: 3.5em;
 	}
 }
 
@@ -3863,15 +3863,21 @@ body.is-preload #sidebar nav ul li {
 	opacity: 0;
 }
 
+/* Sidebar toggle button (hidden on desktop) */
+
+.sidebar-toggle {
+	display: none;
+}
+
 @media screen and (max-width: 1280px) {
 
 	#sidebar {
 		height: 3.5em;
 		left: 0;
 		line-height: 3.5em;
-		overflow: hidden;
+		overflow: visible;
 		padding: 0;
-		text-align: center;
+		text-align: left;
 		top: 0;
 		width: 100%;
 	}
@@ -3881,54 +3887,101 @@ body.is-preload #sidebar nav ul li {
 			-webkit-flex-direction: row;
 			-ms-flex-direction: row;
 			flex-direction: row;
-			-moz-align-items: -moz-stretch;
-			-webkit-align-items: -webkit-stretch;
-			-ms-align-items: -ms-stretch;
-			align-items: stretch;
-			height: inherit;
-			line-height: inherit;
+			-moz-align-items: center;
+			-webkit-align-items: center;
+			-ms-align-items: center;
+			align-items: center;
+			height: 3.5em;
+			line-height: 3.5em;
+			min-height: 0;
+			padding: 0 1.5em;
+			justify-content: flex-end;
 		}
 
 		#sidebar nav {
-			height: inherit;
-			line-height: inherit;
+			display: none;
+			position: absolute;
+			top: 3.5em;
+			left: 0;
+			width: 100%;
+			background: #18192a;
+			z-index: 10000;
+			box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.3);
+		}
+
+		#sidebar.is-open nav {
+			display: block;
 		}
 
 			#sidebar nav ul {
-				display: -moz-flex;
-				display: -webkit-flex;
-				display: -ms-flex;
-				display: flex;
-				height: inherit;
-				line-height: inherit;
+				display: block;
 				margin: 0;
+				padding: 1em 1.5em;
 			}
 
 				#sidebar nav ul li {
 					display: block;
-					height: inherit;
-					line-height: inherit;
-					margin: 0 0 0 2em;
+					margin: 0;
 					padding: 0;
+					line-height: 1;
+				}
+
+				#sidebar nav ul section {
+					line-height: 1.4;
+					margin: 0 0 0.5em 0;
+				}
+
+				#sidebar nav ul section h5 {
+					line-height: 1.4;
+				}
+
+				#sidebar nav ul section a.inner {
+					line-height: 1.4;
+					font-size: 0.85em;
+					color: rgba(255, 255, 255, 0.5);
+				}
+
+				#sidebar nav ul .project-title {
+					font-size: 1em;
+					margin: 0.5em 0 0.25em 0;
+					line-height: 1.4;
+				}
+
+				#sidebar nav ul .project-summary {
+					margin: 0 0 0.5em 0;
+					line-height: 1.5;
 				}
 
 			#sidebar nav a {
-				height: inherit;
-				line-height: inherit;
-				padding: 0;
+				display: block;
+				padding: 0.75em 0;
+				height: auto;
+				line-height: 1;
 			}
 
 				#sidebar nav a:after {
 					background-image: none;
 					background-color: #b74e91;
 				}
-}
 
-@media screen and (max-width: 736px) {
-
-	#sidebar {
-		display: none;
+	.sidebar-toggle {
+		display: block;
+		border: 0;
+		color: rgba(255, 255, 255, 0.65);
+		cursor: pointer;
+		font-size: 1.25em;
+		height: 3.5em;
+		line-height: 3.5em;
+		padding: 0;
+		position: absolute;
+		right: 1em;
+		top: 0;
+		text-decoration: none;
 	}
+
+		.sidebar-toggle:hover {
+			color: #ffffff;
+		}
 }
 
 /* Intro */

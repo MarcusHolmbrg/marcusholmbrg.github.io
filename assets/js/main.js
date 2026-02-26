@@ -47,7 +47,7 @@
 	// Sidebar.
 		if ($sidebar.length > 0) {
 
-			var $sidebar_a = $sidebar.find('a');
+			var $sidebar_a = $sidebar.find('a').not('.sidebar-toggle');
 
 			$sidebar_a
 				.addClass('scrolly')
@@ -186,5 +186,16 @@
 
 				}
 			});
+
+	// Sidebar toggle.
+		$('.sidebar-toggle').on('click', function(event) {
+			event.preventDefault();
+			$sidebar.toggleClass('is-open');
+		});
+
+		// Close sidebar when a nav link is clicked (mobile/tablet).
+		$sidebar.find('nav a').on('click', function() {
+			$sidebar.removeClass('is-open');
+		});
 
 })(jQuery);
