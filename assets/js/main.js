@@ -47,7 +47,7 @@
 	// Sidebar.
 		if ($sidebar.length > 0) {
 
-			var $sidebar_a = $sidebar.find('a').not('.sidebar-toggle');
+			var $sidebar_a = $sidebar.find('a[href]').not('.sidebar-toggle');
 
 			$sidebar_a
 				.addClass('scrolly')
