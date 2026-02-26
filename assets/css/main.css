@@ -2647,6 +2647,32 @@ input[type="radio"] {
 			width: 100%;
 		}
 
+/* Video Hero */
+
+.video-hero {
+	display: block;
+	width: 100%;
+	margin: 0 0 2em 0;
+	border-radius: 0.25em;
+	overflow: hidden;
+	position: relative;
+	background: #000;
+}
+
+	.video-hero video {
+		display: block;
+		width: 100%;
+		border-radius: 0.25em;
+	}
+
+@media screen and (max-width: 736px) {
+
+	.video-hero {
+		margin: 0 0 1.5em 0;
+	}
+
+}
+
 /* List */
 
 ol {
