@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <!--
 	Hyperspace by HTML5 UP
 	html5up.net | @ajlkn
@@ -14,77 +14,96 @@
 	</head>
 	<body class="is-preload">
 
-		<!-- Header -->
-		<header id="header">
-			<a href="index.html" class="title">Home</a>
-			<nav>
-
-			</nav>
-		</header>
+		<!-- Sidebar -->
+		<section id="sidebar">
+			<div class="inner">
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li>
+							<p class="project-title">Octree Terrain</p>
+							<p class="project-summary">A procedural terrain generator using octree data structures and a perception-based LOD system, built in Unity as part of my MSc project.</p>
+						</li>
+						<li><a href="#overview">Overview</a></li>
+						<li><a href="#technical">Technical Details</a></li>
+						<li><a href="#gallery">Gallery</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">Octree Terrain</h1>
-							<div class="video-hero">
-								<video autoplay loop muted playsinline>
-									<source src="vids/octreeterrain.mp4" type="video/mp4">
-								</video>
-							</div>
+			<!-- Video Hero -->
+			<section class="wrapper style2">
+				<div class="video-hero">
+					<video autoplay loop muted playsinline>
+						<source src="vids/octreeterrain.mp4" type="video/mp4">
+					</video>
+				</div>
+			</section>
 
-							<p>
-							My MSc project centered around the use of level of detail (LOD) systems in computer graphics. In it, I proposed a novel method for leveraging human perception to optimize detail allocation based on
-							human perception. In the method I use the geometrical properties of an octree when projected on the screen to dynamically determine LOD transition distances at a minimum cost to performance. Octree data
-							structures are often well suited to represent volumetrical data, as it can compress the memory footprint of said data greatly. In order to conduct an evaluation of my suggested method, I implemented a procedural
-							terrain generator in the Unity game engine. The terrain generator featured a wide array of different parameters, enabling the user to configure what the generated terrain will look like.
-							The choice of making a terrain generator as a tool to evaluate the LOD was made on the strong correlation of LOD systems alongside virtual terrains.
-							</p>
+			<!-- Overview -->
+			<section id="overview" class="wrapper style3 fade-up">
+				<div class="inner">
+					<h2>Overview</h2>
+					<p>
+						My MSc project centered around the use of level of detail (LOD) systems in computer graphics. In it, I proposed a novel method for leveraging human perception to optimize detail allocation based on
+						human perception. In the method I use the geometrical properties of an octree when projected on the screen to dynamically determine LOD transition distances at a minimum cost to performance. Octree data
+						structures are often well suited to represent volumetrical data, as it can compress the memory footprint of said data greatly. In order to conduct an evaluation of my suggested method, I implemented a procedural
+						terrain generator in the Unity game engine. The terrain generator featured a wide array of different parameters, enabling the user to configure what the generated terrain will look like.
+						The choice of making a terrain generator as a tool to evaluate the LOD was made on the strong correlation of LOD systems alongside virtual terrains.
+					</p>
+				</div>
+			</section>
 
-							<p>
-							The terrain is rendered using a mesh which enables it to inherently leverage the post processing and lighting system in Unity. The mesh is also culled and optimized to only contain faces adjecent to air and upwards
-							in order to lower its memory use.
-							</p>
+			<!-- Technical Details -->
+			<section id="technical" class="wrapper style1-alt fade-up">
+				<div class="inner">
+					<h2>Technical Details</h2>
+					<p>
+						The terrain is rendered using a mesh which enables it to inherently leverage the post processing and lighting system in Unity. The mesh is also culled and optimized to only contain faces adjecent to air and upwards
+						in order to lower its memory use.
+					</p>
+					<p>
+						Over the course of this project, I got to learn a lot about working with Unity Jobs, which has been used alongside the Unity Burst compiler to improve performance. In addition to this, I also learned a lot about the
+						area of research as a whole, mainly relating to procedural terrain generation, procedural meshing and creating performant algorithms.
+					</p>
+				</div>
+			</section>
 
-							<p>
-							Over the course of this project, I got to learn a lot about working with Unity Jobs, which has been used alongside the Unity Burst compiler to improve performance. In addition to this, I also learned a lot about the
-							area of research as a whole, mainly relating to procedural terrain generation, procedural meshing and creating performant algorithms.
-							</p>
+			<!-- Gallery -->
+			<section id="gallery" class="wrapper style3 fade-up">
+				<div class="inner">
+					<h2>Gallery</h2>
+					<img width="440" height="320" src="images/mscterrain.png" alt="" />
+					<img width="440" height="320" src="images/terrain1.png" alt="" />
+					<img width="440" height="320" src="images/terrain2.png" alt="" />
+					<br /><br />
+					<p>I am looking to clean up my repository for this project and open source it in the near future. When I do, it will be available on my <a href="https://github.com/MarcusHolmbrg/">github</a>.</p>
+				</div>
+			</section>
 
-							<br />
-							<img width="440" height="320" src="images/mscterrain.png" alt="" />
-							<img width="440" height="320" src="images/terrain1.png" alt="" />
-							<img width="440" height="320" src="images/terrain2.png" alt="" />
-
-							<br />
-							<p>I am looking to clean up my repository for this project and open source it in the near future. When I do, it will be available on my <a href="https://github.com/MarcusHolmbrg/">github</a>.</p>
-
-
-
-						</div>
-					</section>
-
-			</div>
+		</div>
 
 		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+		<footer id="footer" class="wrapper alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

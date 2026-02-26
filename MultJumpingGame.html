@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <!--
 	Hyperspace by HTML5 UP
 	html5up.net | @ajlkn
@@ -14,77 +14,105 @@
 	</head>
 	<body class="is-preload">
 
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">Home</a>
+		<!-- Sidebar -->
+		<section id="sidebar">
+			<div class="inner">
 				<nav>
-
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li>
+							<p class="project-title">Multiplayer Jumping Game</p>
+							<p class="project-summary">A challenging multiplayer platformer inspired by "Getting Over It" and "Jump King", built in Unity with networked physics using Mirror.</p>
+						</li>
+						<li><a href="#overview">Overview</a></li>
+						<li><a href="#technical">Technical Details</a></li>
+						<li><a href="#gameplay">Gameplay</a></li>
+					</ul>
 				</nav>
-			</header>
+			</div>
+		</section>
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">Multiplayer Jumping Game</h1>
-							<span class="image fit"><img src="images/MultJumpingGame.png" alt="" /></span>
-							<p>
-								Probably my most extensive Unity hobby project to date, most of the work took place during the summer of 2021. The idea for the game took inspiration from previous games such as
-								<a href="https://store.steampowered.com/app/240720/Getting_Over_It_with_Bennett_Foddy/">“Getting over it”</a> and <a href="https://store.steampowered.com/app/1061090/Jump_King/">“Jump King”</a>
-								but with the core change from turning it into a singleplayer to a multiplayer experience. The core concept for the gameplay was that it would be highly
-								challenging to the player leading to occasional high levels of frustration but also a rewarding feeling for those who managed to overcome a difficult area and progress. When creating the
-								game I started off by looking for a multiplayer framework that I could use and the one I opted for was a framework called <a href="https://assetstore.unity.com/packages/tools/network/mirror-129321">Mirror</a>.
-								The <a href="https://assetstore.unity.com/packages/tools/network/mirror-129321">Mirror</a> Unity framework already came with full support
-								for synchronizing the rigidbody components used for physics calculation within Unity. As such, using this framework enabled me to use networked physics for each player which was essential
-								for the game to work. I managed to implement this physics based networking on each player object and used it for movement and jumps.
-								<br />
-								<br />
+			<!-- Image Hero -->
+			<section class="wrapper style2">
+				<div class="video-hero">
+					<img src="images/MultJumpingGame.png" alt="" style="width: 100%; display: block;" />
+				</div>
+			</section>
 
-								Another feature I wanted to implement in the game was ragdolling for the player characters. Implementing this took quite a bit of time, but eventually I managed to get it to work.
-								The method I used was that I placed networked rigidbodies in each of the player character’s limbs which would enable it if the player entered a ragdolled state.
-								Along with enabling the ragdoll rigidbodies, the ragdoll state would also disable the normally active animated character. By using this ragdoll state, it was possible to easily switch between
-								ragdoll/non-ragdoll mode for each player which I used for example if the player encountered an obstacle while in the air.
-								<br />
-								<br />
-								During this project I also got some insight into level editing, as I made use of various premade low-poly style 3D models from the Unity asset store which I placed throughout the level.
-								Doing this took quite a bit of time and I felt fairly constricted with the models I had available, especially when it came to filling in smaller gaps and aligning models. After a while of
-								struggling to fill in small gaps by using basic 3D shapes, I found a tool called <a href="https://assetstore.unity.com/packages/tools/modeling/umodeler-lite-133081">“UModeler Lite”</a>
-								which enabled me to sculpt custom 3D shapes in the Unity engine. By using this tool, I managed to
-								create some of the 3D models used in the levels as well as filling in some of the gaps.
+			<!-- Overview -->
+			<section id="overview" class="wrapper style3 fade-up">
+				<div class="inner">
+					<h2>Overview</h2>
+					<p>
+						Probably my most extensive Unity hobby project to date, most of the work took place during the summer of 2021. The idea for the game took inspiration from previous games such as
+						<a href="https://store.steampowered.com/app/240720/Getting_Over_It_with_Bennett_Foddy/">"Getting over it"</a> and <a href="https://store.steampowered.com/app/1061090/Jump_King/">"Jump King"</a>
+						but with the core change from turning it into a singleplayer to a multiplayer experience. The core concept for the gameplay was that it would be highly
+						challenging to the player leading to occasional high levels of frustration but also a rewarding feeling for those who managed to overcome a difficult area and progress. When creating the
+						game I started off by looking for a multiplayer framework that I could use and the one I opted for was a framework called <a href="https://assetstore.unity.com/packages/tools/network/mirror-129321">Mirror</a>.
+					</p>
+				</div>
+			</section>
 
-								<br />
-								<br />
-								Fundamentally, the gameplay itself is very basic. The player can move around as a character and needs to get from point A to point B by jumping over chasms and cliffs without falling. 
-								Each jump is calculated based on the duration of the player holding down their jump button (similar to Jump King) and mastering this is central to progressing as the game gets more and 
-								more challenging, demanding more and more precision from the player. As a player progresses through the game, the idea was that they could also find various pickups which they could use 
-								to interact with other players in the world, allowing them to either help or disrupt other people trying to progress.
+			<!-- Technical Details -->
+			<section id="technical" class="wrapper style1-alt fade-up">
+				<div class="inner">
+					<h2>Technical Details</h2>
+					<p>
+						The <a href="https://assetstore.unity.com/packages/tools/network/mirror-129321">Mirror</a> Unity framework already came with full support
+						for synchronizing the rigidbody components used for physics calculation within Unity. As such, using this framework enabled me to use networked physics for each player which was essential
+						for the game to work. I managed to implement this physics based networking on each player object and used it for movement and jumps.
+					</p>
+					<p>
+						Another feature I wanted to implement in the game was ragdolling for the player characters. Implementing this took quite a bit of time, but eventually I managed to get it to work.
+						The method I used was that I placed networked rigidbodies in each of the player character's limbs which would enable it if the player entered a ragdolled state.
+						Along with enabling the ragdoll rigidbodies, the ragdoll state would also disable the normally active animated character. By using this ragdoll state, it was possible to easily switch between
+						ragdoll/non-ragdoll mode for each player which I used for example if the player encountered an obstacle while in the air.
+					</p>
+					<p>
+						During this project I also got some insight into level editing, as I made use of various premade low-poly style 3D models from the Unity asset store which I placed throughout the level.
+						Doing this took quite a bit of time and I felt fairly constricted with the models I had available, especially when it came to filling in smaller gaps and aligning models. After a while of
+						struggling to fill in small gaps by using basic 3D shapes, I found a tool called <a href="https://assetstore.unity.com/packages/tools/modeling/umodeler-lite-133081">"UModeler Lite"</a>
+						which enabled me to sculpt custom 3D shapes in the Unity engine. By using this tool, I managed to
+						create some of the 3D models used in the levels as well as filling in some of the gaps.
+					</p>
+				</div>
+			</section>
 
-							</p>
-						
-						</div>
-					</section>
+			<!-- Gameplay -->
+			<section id="gameplay" class="wrapper style3 fade-up">
+				<div class="inner">
+					<h2>Gameplay</h2>
+					<p>
+						Fundamentally, the gameplay itself is very basic. The player can move around as a character and needs to get from point A to point B by jumping over chasms and cliffs without falling.
+						Each jump is calculated based on the duration of the player holding down their jump button (similar to Jump King) and mastering this is central to progressing as the game gets more and
+						more challenging, demanding more and more precision from the player. As a player progresses through the game, the idea was that they could also find various pickups which they could use
+						to interact with other players in the world, allowing them to either help or disrupt other people trying to progress.
+					</p>
+				</div>
+			</section>
 
-			</div>
+		</div>
 
 		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+		<footer id="footer" class="wrapper alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
