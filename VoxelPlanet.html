@@ -23,7 +23,7 @@
 					<ul>
 						<li>
 							<p class="project-title">Voxel Planet</p>
-							<p class="project-summary">The technical foundation for an ambitious video game. Done as a two-person collaboration between myself (https://github.com/MarcusHolmbrg) and https://github.com/jfjell </p>
+							<p class="project-summary">The technical foundation for an ambitious video game. Done as a two-person collaboration. </p>
 						</li>
 						<li><a href="#overview">Overview</a></li>
 						<li><a href="#technical">Technical Details</a></li>
@@ -39,6 +39,7 @@
 			<!-- Video Hero -->
 			<section class="wrapper style2">
 				<div class="video-hero">
+					<div class="video-loader"><span class="spinner"></span></div>
 					<video autoplay loop muted playsinline>
 						<source src="vids/AstravoxB.mov" type="video/mp4">
 					</video>
@@ -55,7 +56,22 @@
 				<div class="inner">
 					<h2>Overview</h2>
 					<p>
+						Back in 2023, me (https://github.com/MarcusHolmbrg) and and a friend of mine (https://github.com/jfjell) had an idea for a highly ambitious video game where a player could traverse and dynamically alter entire planets. 
+						Our motivation was always that there is a significant chance this will not work, but let's see how far we can get. The answer was "quite far". 
+						We successfully implemented a robust enough system to procedurally generate entire planets of dynamic volumetric data. This data was stored in voxels (3d pixels) or, 
+						in more straightforward terms, cubes. In order to get the scale we were after, massive areas of each planet had to be rendered at once. Doing this entailed significant work on LOD
+						systems that leveraged an octree data structure, similarly to my previous work in my  <a href = "OctreeTerrain.html">Msc project.</a>.
+
+						This project was a massive learning opportunity for me, allowing me to deep dive into a range of rendering and programming related topics. 
+						The project meant digging much more into GPU programming then I had previously. I learned a lot about various shader types (vertex, fragment and compute shaders) which I also got to 
+						work with numerous times on this project. 
+
+						The project also meant my first deep dive into Unity ECS (Entity Component System) when I looked for a way of achieving a performant physics system built around voxels.
 						
+						I also got to work more blender through this project, animating various tools and items alongside a player model and some monsters. I also got to work with the Blender Geometry Nodes system for the first time,
+						creating a "voxelizer" modifier that I could easily apply to my 3D models to make them appear cubic. 
+						
+						The project was advertized a bit on social media, where the posts combined racked up a total of roughly 100 000 views.
 					</p>
 
 				</div>
@@ -66,9 +82,17 @@
 				<div class="inner">
 					<h2>Technical Details</h2>
 					<p>
-						Features:
+						Initially, a raymarching approach was used as this is a typical way of rendering octree data. After implementing a rudimentary yet functioning version of this, we came to
+						realize its flaws. For one, the lighting was difficult to get working alongside the native Unity lighting framework as documentation for this is limited. Some research was done by
+						looking at the Unity source code but this was quite cumbersome. The main issue, however, was owing to our overall octree structure and numerous types of materials. In order to render
+						the planets using raymarching, the entire octree had to be uploaded to the GPU, causing lag from the continuous data transfer. 
+
+						Features: 
 						* Highly optimized rendering. Voxels are rendered using data packed into only a single integer for each triangle which is packed on the CPU and unpacked on the GPU using bit shifting.
-						* 
+						* Multi-threading, leveraging a threadpool system to complete tasks.
+						* Native plugins written in C++ 
+						* Compute shaders to sort voxel data on the GPU.
+						* Physics built on custom modified Unity ECS physics system and Unity Burst. 
 					</p>
 				</div>
 			</section>

@@ -198,4 +198,21 @@
 			$sidebar.removeClass('is-open');
 		});
 
+	// Video hero loading.
+		$('.video-hero video').each(function() {
+			var $video = $(this);
+			var $loader = $video.siblings('.video-loader');
+
+			function onReady() {
+				$video.addClass('is-loaded');
+				$loader.addClass('is-hidden');
+			}
+
+			if (this.readyState >= 3) {
+				onReady();
+			} else {
+				$video.on('canplay', onReady);
+			}
+		});
+
 })(jQuery);
