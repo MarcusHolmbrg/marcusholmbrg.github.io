@@ -55,13 +55,22 @@
 			<section id="overview" class="wrapper style3 fade-up">
 				<div class="inner">
 					<h2>Overview</h2>
-					<p class="two-col">
-						My MSc project centered around the use of level of detail (LOD) systems in computer graphics. In it, I proposed a novel method for leveraging human perception to optimize detail allocation based on
-						human perception. In the method I use the geometrical properties of an octree when projected on the screen to dynamically determine LOD transition distances at a minimum cost to performance. Octree data
-						structures are often well suited to represent volumetrical data, as it can compress the memory footprint of said data greatly. In order to conduct an evaluation of my suggested method, I implemented a procedural
-						terrain generator in the Unity game engine. The terrain generator featured a wide array of different parameters, enabling the user to configure what the generated terrain will look like.
-						The choice of making a terrain generator as a tool to evaluate the LOD was made on the strong correlation of LOD systems alongside virtual terrains.
-					</p>
+					<div class="two-col">
+						<div>
+							<h3>Research Goal</h3>
+							<p>
+								My MSc project centered around level of detail (LOD) systems in computer graphics. I proposed a novel method that leverages human perception to optimize detail allocation &mdash;
+								using the geometrical properties of an octree when projected on screen to dynamically determine LOD transition distances at minimal cost to performance.
+							</p>
+						</div>
+						<div>
+							<h3>Terrain Generator</h3>
+							<p>
+								To evaluate my method, I implemented a procedural terrain generator in Unity. Octree data structures are well suited for volumetric data as they can greatly compress its memory footprint.
+								The generator featured a wide array of configurable parameters, and terrain was chosen as the evaluation domain due to the strong correlation between LOD systems and virtual terrains.
+							</p>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -69,14 +78,22 @@
 			<section id="technical" class="wrapper style1-alt fade-up">
 				<div class="inner">
 					<h2>Technical Details</h2>
-					<p class="two-col">
-						The terrain is rendered using a mesh which enables it to inherently leverage the post processing and lighting system in Unity. The mesh is also culled and optimized to only contain faces adjecent to air and upwards
-						in order to lower its memory use.
-					</p>
-					<p class="two-col">
-						Over the course of this project, I got to learn a lot about working with Unity Jobs, which has been used alongside the Unity Burst compiler to improve performance. In addition to this, I also learned a lot about the
-						area of research as a whole, mainly relating to procedural terrain generation, procedural meshing and creating performant algorithms.
-					</p>
+					<div class="two-col">
+						<div>
+							<h3>Rendering &amp; Optimization</h3>
+							<p>
+								The terrain is rendered as a mesh, enabling it to leverage Unity's built-in post-processing and lighting systems. The mesh is culled and optimized to only include faces adjacent to air
+								and facing upward, significantly reducing its memory footprint.
+							</p>
+						</div>
+						<div>
+							<h3>Performance &amp; Learnings</h3>
+							<p>
+								This project taught me a great deal about working with Unity Jobs alongside the Unity Burst compiler to achieve high performance. I also gained broader research experience in
+								procedural terrain generation, procedural meshing, and designing performant algorithms.
+							</p>
+						</div>
+					</div>
 				</div>
 			</section>
 

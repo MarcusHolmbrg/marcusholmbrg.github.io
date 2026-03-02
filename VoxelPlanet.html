@@ -55,23 +55,38 @@
 			<section id="overview" class="wrapper style3 fade-up">
 				<div class="inner">
 					<h2>Overview</h2>
-					<p class="two-col">
-						In 2023, <a href="https://github.com/MarcusHolmbrg">myself</a> and a <a href="https://github.com/jfjell">friend</a> set out to build a highly ambitious video game where a player could
-						seamlessly traverse and dynamically reshape entire planets. Our philosophy was simple: there is a real chance this won't work, but let's see how far we can push it. The answer turned out to be
-						"remarkably far." We built a system capable of procedurally generating full-scale planets composed of dynamic volumetric data, stored as voxels (3D pixels) &mdash; or in simpler terms, cubes.
-						Achieving the scale we envisioned required rendering massive portions of each planet simultaneously, which demanded extensive work on level-of-detail (LOD) systems backed by octree data structures,
-						building on techniques from my earlier <a href="OctreeTerrain.html">MSc project</a>.
-					</p>
-					<p class="two-col">
-						This project became an immense learning experience across a wide range of rendering and systems programming topics. It pushed me far deeper into GPU programming than I had ventured before &mdash;
-						I gained hands-on experience with vertex, fragment, and compute shaders, applying them extensively throughout the project. It also marked my first deep dive into Unity ECS (Entity Component System),
-						which I adopted to build a performant physics system tailored to voxel data.
-					</p>
-					<p class="two-col">
-						Beyond programming, the project gave me the opportunity to expand my skills in Blender, where I animated tools, items, a player model, and monsters. I also explored the Blender Geometry Nodes system
-						for the first time, building a custom "voxelizer" modifier that could be applied to any 3D model to give it a cubic aesthetic.
-						The project gained traction on social media, where posts showcasing our progress accumulated roughly 100,000 views combined.
-					</p>
+					<div class="two-col">
+						<div>
+							<h3>The Idea</h3>
+							<p>
+								In 2023, <a href="https://github.com/MarcusHolmbrg">myself</a> and a <a href="https://github.com/jfjell">friend</a> set out to build a highly ambitious video game where a player could
+								seamlessly traverse and dynamically reshape entire planets. Our philosophy was simple: there is a real chance this won't work, but let's see how far we can push it. The answer turned out to be
+								"remarkably far." We built a system capable of procedurally generating full-scale planets composed of dynamic volumetric data, stored as voxels (3D pixels) &mdash; or in simpler terms, cubes.
+							</p>
+						</div>
+						<div>
+							<h3>Scale &amp; Architecture</h3>
+							<p>
+								Achieving the scale we envisioned required rendering massive portions of each planet simultaneously. This demanded extensive work on level-of-detail (LOD) systems backed by octree data structures,
+								building on techniques from my earlier <a href="OctreeTerrain.html">MSc project</a>. The result was a system that could handle planet-scale worlds while maintaining interactive frame rates.
+							</p>
+						</div>
+						<div>
+							<h3>GPU &amp; Systems Programming</h3>
+							<p>
+								This project pushed me far deeper into GPU programming than I had ventured before &mdash; I gained hands-on experience with vertex, fragment, and compute shaders, applying them extensively throughout the project.
+								It also marked my first deep dive into Unity ECS (Entity Component System), which I adopted to build a performant physics system tailored to voxel data.
+							</p>
+						</div>
+						<div>
+							<h3>Art &amp; Community</h3>
+							<p>
+								Beyond programming, the project expanded my skills in Blender, where I animated tools, items, a player model, and monsters. I also explored Blender's Geometry Nodes system for the first time,
+								building a custom "voxelizer" modifier that could be applied to any 3D model to give it a cubic aesthetic.
+								The project gained traction on social media, accumulating roughly 100,000 views combined.
+							</p>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -79,20 +94,26 @@
 			<section id="technical" class="wrapper style1-alt fade-up">
 				<div class="inner">
 					<h2>Technical Details</h2>
-					<p class="two-col">
-						We initially explored a raymarching approach, which is a common technique for rendering octree data. After implementing a rudimentary yet functional version, its limitations became clear.
-						Integrating lighting with Unity's native rendering pipeline proved difficult due to limited documentation &mdash; we resorted to reading Unity source code, which was cumbersome.
-						The critical bottleneck, however, stemmed from our octree structure and the variety of material types: raymarching required uploading the entire octree to the GPU every frame, causing
-						significant lag from the continuous data transfer. This led us to pivot to a mesh-based rendering approach that worked within Unity's standard pipeline.
-					</p>
-					<h3>Key Features</h3>
-					<ul>
-						<li>Highly optimized rendering &mdash; each triangle is encoded into a single integer on the CPU and decoded on the GPU using bit shifting.</li>
-						<li>Multi-threaded architecture leveraging a custom thread pool system.</li>
-						<li>Native C++ plugins for performance-critical operations.</li>
-						<li>Compute shaders for sorting voxel data directly on the GPU.</li>
-						<li>Custom voxel physics built on a modified Unity ECS physics system with Unity Burst compilation.</li>
-					</ul>
+					<div class="two-col full-width-top">
+						<div>
+							<h3>Rendering Approach</h3>
+							<p>
+								We initially explored a raymarching approach, a common technique for rendering octree data. After implementing a rudimentary yet functional version, its limitations became clear.
+								Integrating lighting with Unity's native rendering pipeline proved difficult due to limited documentation, and the critical bottleneck stemmed from needing to upload the entire octree to the GPU every frame.
+								This led us to pivot to a mesh-based rendering approach that worked within Unity's standard pipeline.
+							</p>
+						</div>
+						<div>
+							<h3>Key Features</h3>
+							<ul>
+								<li>Highly optimized rendering &mdash; each triangle is encoded into a single integer on the CPU and decoded on the GPU using bit shifting.</li>
+								<li>Multi-threaded architecture leveraging a custom thread pool system.</li>
+								<li>Native C++ plugins for performance-critical operations.</li>
+								<li>Compute shaders for sorting voxel data directly on the GPU.</li>
+								<li>Custom voxel physics built on a modified Unity ECS physics system with Unity Burst compilation.</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</section>
 

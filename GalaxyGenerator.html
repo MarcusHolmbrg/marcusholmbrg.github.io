@@ -55,16 +55,23 @@
 			<section id="overview" class="wrapper style3 fade-up">
 				<div class="inner">
 					<h2>Overview</h2>
-					<p class="two-col">
-						During late 2023, I got to work on a personal hobby project to develop a procedural galaxy generator as a part of a video game I am working on. I wanted the generator to be able to output
-						differing and unique galaxies that where volumetric, meaning that the camera should be able to move through them. The idea in turn was to be able to use the galaxies as a backdrop from which to
-						create skyboxes for solar systems, which can be created by clicking on each of the stars.
-					</p>
-					<p class="two-col">
-						The galaxy generator can be split into two different parts. The first consists of placing the stars in a spiral pattern around a central axis position. In this step, the number of spirals for the galaxy,
-						as well as their curvature and the "weight" of the center of the galaxy are randomized. Each star is placed in a weighted disk around the center of the galaxy, after which it is moved towards the closest point of the closest
-						spiral.
-					</p>
+					<div class="two-col">
+						<div>
+							<h3>The Concept</h3>
+							<p>
+								During late 2023, I developed a procedural galaxy generator as part of a video game I am working on. The goal was to produce unique, volumetric galaxies that the camera could
+								fly through &mdash; not just flat backdrops but fully three-dimensional structures. These galaxies serve as the foundation for generating skyboxes for solar systems, which can be
+								entered by clicking on individual stars.
+							</p>
+						</div>
+						<div>
+							<h3>Star Placement</h3>
+							<p>
+								The generator begins by placing stars in spiral patterns around a central axis. The number of spiral arms, their curvature, and the gravitational "weight" of the galaxy's center
+								are all randomized from a seed. Each star is initially placed in a weighted disk, then pulled toward the nearest point on the closest spiral arm, producing natural-looking galactic structure.
+							</p>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -72,14 +79,24 @@
 			<section id="technical" class="wrapper style1-alt fade-up">
 				<div class="inner">
 					<h2>Technical Details</h2>
-					<p class="two-col">
-						The second part of the generator consists of the VFX. The particles used to generate this are created using the Unity VFX graph using a set of parameters ranging from coloration to
-						particle velocity, noise and vector fields. These sets of parameters are also genererated in the galaxy generator script using the same randomizer seed as the stars themselves, leading to a unique set of VFX for each
-						different galaxy. The particles are generated through two separate systems. The first of these systems instantiate particles in a torus around the center of the galaxy. Each instantiated particle is then subjected to a
-						force causing it to move towards the center of the galaxy while also providing a bit of rotational movement. The second particle system was aimed at representing the spiral "arms" of the galaxy. In order to do this,
-						particles are instantiated on the surfaces of sphere placed at the outer perimiter of the galaxy. These particles are then, similarly to the particles in the disk subject to forces moving them inwards toward the center
-						of the galaxy as well as a rotational force. This force is dependent on the spiral curvature of the galaxy generator.
-					</p>
+					<div class="two-col">
+						<div>
+							<h3>Dust Disk Particles</h3>
+							<p>
+								The visual effects are driven by the Unity VFX Graph with parameters for coloration, particle velocity, noise, and vector fields. These parameters are generated from the same
+								randomizer seed as the stars, ensuring each galaxy has a unique visual identity. The first particle system spawns particles in a torus around the galaxy's center, where each particle is
+								subjected to inward and rotational forces to simulate the swirling motion of a galactic dust disk.
+							</p>
+						</div>
+						<div>
+							<h3>Spiral Arm Particles</h3>
+							<p>
+								The second particle system represents the spiral arms. Particles are instantiated on the surfaces of spheres placed at the outer perimeter of the galaxy, then drawn inward toward
+								the center with an additional rotational force. This rotational force is tied to the spiral curvature of the galaxy generator, so the particle trails naturally follow the same
+								spiral structure as the stars.
+							</p>
+						</div>
+					</div>
 				</div>
 			</section>
 
