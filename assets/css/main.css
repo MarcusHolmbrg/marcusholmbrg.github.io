@@ -2674,6 +2674,30 @@ input[type="radio"] {
 		pointer-events: none;
 	}
 
+/* Project Tags */
+
+.project-tags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.6em;
+	padding: 1.2em 1.5em;
+	background: rgba(36, 37, 60, 0.6);
+}
+
+	.project-tags .tag {
+		display: inline-block;
+		padding: 0.35em 0.9em;
+		font-size: 0.8em;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		color: rgba(255, 255, 255, 0.85);
+		background: linear-gradient(135deg, rgba(94, 66, 166, 0.4), rgba(183, 78, 145, 0.4));
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		border-radius: 2em;
+		white-space: nowrap;
+	}
+
 /* Home Icon Button (project pages) */
 
 #sidebar .home-icon {
