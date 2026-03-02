@@ -55,7 +55,7 @@
 			<section id="overview" class="wrapper style3 fade-up">
 				<div class="inner">
 					<h2>Overview</h2>
-					<p>
+					<p class="two-col">
 						My MSc project centered around the use of level of detail (LOD) systems in computer graphics. In it, I proposed a novel method for leveraging human perception to optimize detail allocation based on
 						human perception. In the method I use the geometrical properties of an octree when projected on the screen to dynamically determine LOD transition distances at a minimum cost to performance. Octree data
 						structures are often well suited to represent volumetrical data, as it can compress the memory footprint of said data greatly. In order to conduct an evaluation of my suggested method, I implemented a procedural
@@ -69,11 +69,11 @@
 			<section id="technical" class="wrapper style1-alt fade-up">
 				<div class="inner">
 					<h2>Technical Details</h2>
-					<p>
+					<p class="two-col">
 						The terrain is rendered using a mesh which enables it to inherently leverage the post processing and lighting system in Unity. The mesh is also culled and optimized to only contain faces adjecent to air and upwards
 						in order to lower its memory use.
 					</p>
-					<p>
+					<p class="two-col">
 						Over the course of this project, I got to learn a lot about working with Unity Jobs, which has been used alongside the Unity Burst compiler to improve performance. In addition to this, I also learned a lot about the
 						area of research as a whole, mainly relating to procedural terrain generation, procedural meshing and creating performant algorithms.
 					</p>

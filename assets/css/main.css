@@ -4101,3 +4101,13 @@ body.is-preload #sidebar nav ul li {
 		background-attachment: scroll;
 	}
 }
+
+/* Two-column text layout for project pages on wide screens */
+
+@media screen and (min-width: 981px) {
+
+	.wrapper > .inner > .two-col {
+		column-count: 2;
+		column-gap: 2.5em;
+	}
+}
