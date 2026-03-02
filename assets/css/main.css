@@ -2674,6 +2674,28 @@ input[type="radio"] {
 		pointer-events: none;
 	}
 
+/* Home Icon Button (project pages) */
+
+#sidebar .home-icon {
+	position: absolute;
+	top: 0.75em;
+	left: 0.75em;
+	display: inline-block;
+	color: rgba(255, 255, 255, 0.35);
+	font-size: 0.75em;
+	text-decoration: none;
+	transition: color 0.2s ease;
+	z-index: 1;
+}
+
+#sidebar .home-icon:hover {
+	color: #ffffff;
+}
+
+#sidebar .home-icon .fa-arrow-left {
+	margin-right: 0.3em;
+}
+
 /* Project Sidebar Summary */
 
 #sidebar .project-summary {
